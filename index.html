@@ -13,7 +13,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://filmy4wap1.pages.dev/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Facebook / WhatsApp / Telegram -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://filmy4wap1.pages.dev/">
   <meta property="og:title" content="Filmy4wap: Honest Guide to Features, Categories & Mobile Tips">
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
   </noscript>
 
-  <!-- JSON-LD Structured Data Schema -->
+  <!-- JSON-LD Structured Data Schema (Article + FAQPage + WebSite) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -287,7 +287,7 @@
       margin: 0 auto 30px;
     }
 
-    /* Futuristic Navigation Action Buttons */
+    /* Navigation Action Buttons */
     .hero-buttons {
       display: flex;
       justify-content: center;
@@ -333,6 +333,43 @@
     .btn-secondary:hover {
       transform: translateY(-3px);
       box-shadow: 0 0 30px rgba(255, 0, 127, 0.5);
+    }
+
+    /* Visual Media & Image Grid */
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .poster-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .poster-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan-neon);
+    }
+
+    .poster-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #0f172a;
+    }
+
+    .poster-caption {
+      padding: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
     }
 
     /* Content Cards & Sections */
@@ -402,17 +439,44 @@
       color: #ffffff;
     }
 
-    /* Vault Interactive Tree Visualizer */
-    .vault-tree {
-      background: rgba(8, 12, 20, 0.9);
+    /* Clean Semantic Tree List replacing ASCII text */
+    .vault-list-wrapper {
+      background: rgba(8, 12, 20, 0.85);
       border: 1px solid rgba(0, 242, 254, 0.25);
       border-radius: var(--radius-md);
-      padding: 24px;
-      font-family: monospace;
-      color: #38bdf8;
-      overflow-x: auto;
+      padding: 24px 30px;
       margin: 20px 0;
-      white-space: pre;
+    }
+
+    .vault-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--cyan-neon);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .vault-tree-list {
+      list-style-type: none;
+      margin-left: 0;
+    }
+
+    .vault-tree-list > li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    .vault-tree-list > li::before {
+      content: "↳";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      color: var(--violet-neon);
+      font-weight: bold;
+      font-size: 1.2rem;
     }
 
     /* Feature Grid */
@@ -449,7 +513,6 @@
       border: 1px solid var(--border-glow);
       padding: 20px;
       border-radius: var(--radius-md);
-      cursor: pointer;
       transition: all 0.3s ease;
     }
 
@@ -459,7 +522,6 @@
       background: rgba(0, 242, 254, 0.05);
     }
 
-    /* High Contrast Accessibility Compliant Badges */
     .quality-badge {
       display: inline-block;
       padding: 4px 10px;
@@ -576,6 +638,13 @@
       color: #e2e8f0;
     }
 
+    /* Policy Anchor Sections */
+    .policy-section {
+      padding-top: 20px;
+      border-top: 1px solid var(--border-glow);
+      margin-top: 40px;
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border-glow);
@@ -591,11 +660,17 @@
       justify-content: center;
       gap: 20px;
       margin-bottom: 16px;
+      flex-wrap: wrap;
     }
 
     .footer-links a {
       color: var(--cyan-neon);
       text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
     }
 
     .back-to-top {
@@ -629,7 +704,6 @@
       .hero-title { font-size: 2rem; }
       .card { padding: 20px; }
       .nav-container { flex-direction: column; gap: 12px; }
-      .vault-tree { font-size: 0.8rem; }
       .hero-buttons { flex-direction: column; width: 100%; }
       .btn-domain { width: 100%; }
     }
@@ -662,14 +736,44 @@
         We have all been there. It is late at night, you are lying in bed with your phone on 15% battery, and you just want to find a good movie to watch before calling it a day. You open a website, and boom—five annoying pop-ups block your screen, your mobile browser freezes up, and half your daily internet data vanishes before the page even finishes loading.
       </p>
 
-      <!-- Navigation Action Buttons -->
+      <!-- Contextual External Mirror Links (Mitigating Doorway Risk) -->
       <div class="hero-buttons">
-        <a href="https://ofilmy4wap.pages.dev/" target="_blank" rel="noopener" class="btn-domain btn-primary">
-          Visit Domain 1 Server
+        <a href="https://ofilmy4wap.pages.dev/" target="_blank" rel="noopener nofollow" class="btn-domain btn-primary">
+          Visit Domain 1 Mirror
         </a>
-        <a href="https://filmy4wap-878.pages.dev/" target="_blank" rel="noopener" class="btn-domain btn-secondary">
-          Visit Domain 2 Server
+        <a href="https://filmy4wap-878.pages.dev/" target="_blank" rel="noopener nofollow" class="btn-domain btn-secondary">
+          Visit Domain 2 Mirror
         </a>
+      </div>
+    </section>
+
+    <!-- Visual Category Posters (Issue 4 Fixed for Image SEO) -->
+    <section class="poster-grid">
+      <div class="poster-card">
+        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="South Indian Hindi Dubbed Movies Category Poster">
+          <rect width="100%" height="100%" fill="#0f172a"/>
+          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#00f2fe" font-family="Space Grotesk" font-size="22" font-weight="bold">SOUTH INDIAN</text>
+          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Hindi Dubbed Action</text>
+        </svg>
+        <div class="poster-caption">South Indian Hindi Dubbed</div>
+      </div>
+
+      <div class="poster-card">
+        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="Bollywood Cinema Releases Category Poster">
+          <rect width="100%" height="100%" fill="#0f172a"/>
+          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#9d4edd" font-family="Space Grotesk" font-size="22" font-weight="bold">BOLLYWOOD</text>
+          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Latest &amp; Classics</text>
+        </svg>
+        <div class="poster-caption">Bollywood Collection</div>
+      </div>
+
+      <div class="poster-card">
+        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="Hollywood Dual Audio Movies Category Poster">
+          <rect width="100%" height="100%" fill="#0f172a"/>
+          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#ff007f" font-family="Space Grotesk" font-size="22" font-weight="bold">HOLLYWOOD</text>
+          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Dual Audio 1080p</text>
+        </svg>
+        <div class="poster-caption">Hollywood Dual Audio</div>
       </div>
     </section>
 
@@ -708,18 +812,20 @@
       <p style="margin-top:20px;"><strong>Crazy variety of regional films:</strong> Whether you speak Hindi, love South Indian movies, or want English hits dubbed into local languages, the variety is huge.</p>
     </section>
 
-    <!-- Section 2: Vault -->
+    <!-- Section 2: Vault (Semantic HTML List replacing ASCII text) -->
     <section class="card">
       <h2>A Tour of the Content Vault: What Can You Find on Filmy4wap?</h2>
       <p>The platform does not just dump thousands of random titles into one messy pile. Everything is neatly separated into categories so you can jump straight to your favorite genre without wasting time scrolling through stuff you don't care about.</p>
 
-      <div class="vault-tree">
-Filmy4wap Main Vault
-├── South Indian Hindi Dubbed (Action, Thrillers, Mass Hits)
-├── Bollywood Cinema (New Releases, Classics, Comedies)
-├── Hollywood in Hindi (Superheroes, Sci-Fi, Dubbed Hits)
-├── Web Series & OTT Shows (Season-by-Season, Episode Lists)
-└── Regional Specials (Punjabi, Marathi, Original South Tracks)
+      <div class="vault-list-wrapper">
+        <div class="vault-title">Filmy4wap Main Vault Structure</div>
+        <ul class="vault-tree-list">
+          <li><strong>South Indian Hindi Dubbed:</strong> Action, Thrillers, Mass Blockbusters</li>
+          <li><strong>Bollywood Cinema:</strong> New Releases, Classics, Comedies</li>
+          <li><strong>Hollywood in Hindi:</strong> Superheroes, Sci-Fi, Dubbed Hits</li>
+          <li><strong>Web Series &amp; OTT Shows:</strong> Season-by-Season, Episode Lists</li>
+          <li><strong>Regional Specials:</strong> Punjabi, Marathi, Original South Audio</li>
+        </ul>
       </div>
 
       <h3>1. South Indian Hindi Dubbed Movies (The Main Event)</h3>
@@ -729,10 +835,10 @@ Filmy4wap Main Vault
       <h3>2. Bollywood Full Movies</h3>
       <p>If you are in the mood for classic Mumbai cinema, this section has you covered. It includes big-budget theatrical releases, direct-to-OTT films, 90s nostalgia hits, and light-hearted family comedies. You can easily filter through different years—like 2026, 2025, or older classic eras—to find exactly what matches your mood.</p>
 
-      <h3>3. Hollywood Movies (Hindi Dubbed & Dual Audio)</h3>
+      <h3>3. Hollywood Movies (Hindi Dubbed &amp; Dual Audio)</h3>
       <p>Love superhero movies, giant monster flicks, or fast-paced sci-fi thrillers? The Hollywood section brings major international releases directly to your screen. Best of all, most of these listings offer <strong>Dual Audio</strong> options, meaning you can choose to listen in English or enjoy a clear Hindi dub.</p>
 
-      <h3>4. Web Series & Binge-Worthy OTT Shows</h3>
+      <h3>4. Web Series &amp; Binge-Worthy OTT Shows</h3>
       <p>With streaming shows becoming just as popular as traditional full-length films, Filmy4wap has a dedicated area for web series. Shows are organized neatly by Season numbers (Season 1, Season 2, etc.) and individual episode listings, making it easy to track where you left off.</p>
 
       <h3>5. Punjabi and Local Regional Cinema</h3>
@@ -741,7 +847,7 @@ Filmy4wap Main Vault
 
     <!-- Section 3: Video Quality -->
     <section class="card">
-      <h2>Let's Talk Video Quality & Saving Your Mobile Internet</h2>
+      <h2>Let's Talk Video Quality &amp; Saving Your Mobile Internet</h2>
       <p>We don't all have unlimited fiber Wi-Fi at home. Millions of users rely on daily mobile data packs—usually around 1.5GB or 2GB per day. If you spend half of that just opening a web page, your day is ruined.</p>
       <p>Filmy4wap solves this problem by offering multiple video quality formats. Here is a realistic breakdown of how to pick the right one for your phone and data situation:</p>
 
@@ -881,14 +987,14 @@ Filmy4wap Main Vault
       <p>You don't need the latest flagship phone to open Filmy4wap smoothly. Because the underlying code is lightweight HTML, it runs cleanly on almost anything with a screen and a browser:</p>
       <ul>
         <li><strong>Budget Android Smartphones:</strong> Works great on basic phones, even older Android versions.</li>
-        <li><strong>iPhones & iPads:</strong> Completely smooth on Mobile Safari or Chrome for iOS.</li>
-        <li><strong>Laptops & Desktops:</strong> The grid layout automatically expands to fit widescreen monitors without stretching images weirdly.</li>
-        <li><strong>Smart TVs & Android Boxes:</strong> Accessible through TV web browsers for checking upcoming movie releases from your living room couch.</li>
+        <li><strong>iPhones &amp; iPads:</strong> Completely smooth on Mobile Safari or Chrome for iOS.</li>
+        <li><strong>Laptops &amp; Desktops:</strong> The grid layout automatically expands to fit widescreen monitors without stretching images weirdly.</li>
+        <li><strong>Smart TVs &amp; Android Boxes:</strong> Accessible through TV web browsers for checking upcoming movie releases from your living room couch.</li>
       </ul>
     </section>
 
     <!-- Section 9: FAQs -->
-    <section class="card">
+    <section class="card" id="faq-section">
       <h2>Frequently Asked Questions (FAQs)</h2>
 
       <div class="faq-item">
@@ -971,19 +1077,30 @@ Filmy4wap Main Vault
         <strong>A Quick Reminder:</strong> While checking out movie details and trailers on Filmy4wap is fun and easy, always try to watch full movies through official, legal streaming platforms like Netflix, Amazon Prime Video, Disney+ Hotstar, SonyLIV, and Zee5. Supporting official releases ensures original creators get paid for their hard work and gives you the absolute best picture and sound quality possible!
       </blockquote>
     </section>
+
+    <!-- Embedded Working Policies (Issue 3 Fixed to prevent dead links) -->
+    <section class="card policy-section" id="privacy-policy">
+      <h2>Privacy Policy</h2>
+      <p>This page provides informational educational content regarding movie formats, category indexes, and mobile data saving optimization. We do not store personal details, collect account credentials, or track user browsing identities.</p>
+    </section>
+
+    <section class="card policy-section" id="terms-of-service">
+      <h2>Terms of Guide</h2>
+      <p>All trademarks, title names, and image references belong to their respective copyright holders. This guide acts purely as an informational resource evaluating UI performance and file compression specifications.</p>
+    </section>
   </main>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="scrollTopBtn" aria-label="Back to top">↑</button>
 
-  <!-- Footer -->
+  <!-- Footer (Working Non-Dead Links) -->
   <footer>
     <div class="container">
       <div class="footer-links">
         <a href="#">Home</a>
-        <a href="#faq">FAQ</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Guide</a>
+        <a href="#faq-section">FAQ</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#terms-of-service">Terms of Guide</a>
       </div>
       <p>© 2026 Filmy4wap Guide. Deployed on Cloudflare Pages. Built for speed and accessibility.</p>
     </div>
