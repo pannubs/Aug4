@@ -132,9 +132,7 @@
     :root {
       --bg-dark: #07090e;
       --bg-card: #0f172a;
-      --bg-card-hover: #1e293b;
       --border-glow: rgba(0, 242, 254, 0.2);
-      --border-bright: rgba(0, 242, 254, 0.6);
       --cyan-neon: #00f2fe;
       --violet-neon: #9d4edd;
       --pink-neon: #ff007f;
@@ -264,7 +262,7 @@
       font-size: 0.95rem;
       font-weight: 700;
       text-decoration: none;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease;
     }
 
     .btn-primary {
@@ -285,37 +283,6 @@
 
     .btn-secondary:hover {
       transform: translateY(-2px);
-    }
-
-    /* Visual Media & Image Grid */
-    .poster-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 20px 0;
-    }
-
-    .poster-card {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid var(--border-glow);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .poster-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      background: #0f172a;
-    }
-
-    .poster-caption {
-      padding: 10px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-main);
     }
 
     /* Content Cards & Sections */
@@ -646,36 +613,6 @@
         <a href="https://filmy4wap-878.pages.dev/" target="_blank" rel="noopener nofollow" class="btn-domain btn-secondary">
           Visit Domain 2 Mirror
         </a>
-      </div>
-    </section>
-
-    <!-- Visual Category Posters -->
-    <section class="poster-grid">
-      <div class="poster-card">
-        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="South Indian Hindi Dubbed Movies Category Poster">
-          <rect width="100%" height="100%" fill="#0f172a"/>
-          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#00f2fe" font-family="Space Grotesk" font-size="22" font-weight="bold">SOUTH INDIAN</text>
-          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Hindi Dubbed Action</text>
-        </svg>
-        <div class="poster-caption">South Indian Hindi Dubbed</div>
-      </div>
-
-      <div class="poster-card">
-        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="Bollywood Cinema Releases Category Poster">
-          <rect width="100%" height="100%" fill="#0f172a"/>
-          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#9d4edd" font-family="Space Grotesk" font-size="22" font-weight="bold">BOLLYWOOD</text>
-          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Latest &amp; Classics</text>
-        </svg>
-        <div class="poster-caption">Bollywood Collection</div>
-      </div>
-
-      <div class="poster-card">
-        <svg class="poster-img" viewBox="0 0 400 300" role="img" aria-label="Hollywood Dual Audio Movies Category Poster">
-          <rect width="100%" height="100%" fill="#0f172a"/>
-          <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#ff007f" font-family="Space Grotesk" font-size="22" font-weight="bold">HOLLYWOOD</text>
-          <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Outfit" font-size="14">Dual Audio 1080p</text>
-        </svg>
-        <div class="poster-caption">Hollywood Dual Audio</div>
       </div>
     </section>
 
