@@ -287,39 +287,52 @@
       margin: 0 auto 30px;
     }
 
-    /* Live Search Filter */
-    .search-wrapper {
-      max-width: 580px;
+    /* Futuristic Navigation Action Buttons */
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
       margin: 0 auto 40px;
-      position: relative;
+      flex-wrap: wrap;
     }
 
-    .search-input {
-      width: 100%;
-      padding: 16px 24px 16px 50px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--border-bright);
+    .btn-domain {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
       border-radius: 40px;
-      color: var(--text-main);
+      font-family: var(--font-heading);
       font-size: 1rem;
-      outline: none;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
-      transition: all 0.3s ease;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
-    .search-input:focus {
-      box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
-      border-color: var(--cyan-neon);
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan-neon), #0284c7);
+      color: #000000;
+      border: 1px solid var(--cyan-neon);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
     }
 
-    .search-icon {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      fill: var(--text-muted);
-      width: 20px;
-      height: 20px;
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--violet-neon), var(--pink-neon));
+      color: #ffffff;
+      border: 1px solid var(--violet-neon);
+      box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(255, 0, 127, 0.5);
     }
 
     /* Content Cards & Sections */
@@ -446,14 +459,14 @@
       background: rgba(0, 242, 254, 0.05);
     }
 
-    /* High Contrast Accessibility Compliant Badges (WCAG AAA Ratio > 10:1) */
+    /* High Contrast Accessibility Compliant Badges */
     .quality-badge {
       display: inline-block;
       padding: 4px 10px;
       border-radius: 4px;
       font-size: 0.825rem;
       font-weight: 800;
-      color: #000000; /* Dark text on bright background ensures WCAG compliance */
+      color: #000000;
       margin-bottom: 10px;
     }
 
@@ -617,6 +630,8 @@
       .card { padding: 20px; }
       .nav-container { flex-direction: column; gap: 12px; }
       .vault-tree { font-size: 0.8rem; }
+      .hero-buttons { flex-direction: column; width: 100%; }
+      .btn-domain { width: 100%; }
     }
   </style>
 </head>
@@ -629,7 +644,7 @@
   <header>
     <div class="container nav-container">
       <a href="#" class="logo">
-        Filmy4wap <span>Guide 2026</span>
+        Filmy4wap <span>2026</span>
       </a>
       <div class="badge-edge">
         <div class="pulse-dot"></div> Cloudflare Static Edge Fast
@@ -647,22 +662,26 @@
         We have all been there. It is late at night, you are lying in bed with your phone on 15% battery, and you just want to find a good movie to watch before calling it a day. You open a website, and boom—five annoying pop-ups block your screen, your mobile browser freezes up, and half your daily internet data vanishes before the page even finishes loading.
       </p>
 
-      <!-- Live Filter Bar -->
-      <div class="search-wrapper">
-        <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="filter-input" class="search-input" placeholder="Search guide topics (e.g. South Indian, HEVC, 480p, Dual Audio)...">
+      <!-- Navigation Action Buttons -->
+      <div class="hero-buttons">
+        <a href="https://ofilmy4wap.pages.dev/" target="_blank" rel="noopener" class="btn-domain btn-primary">
+          Visit Domain 1 Server
+        </a>
+        <a href="https://filmy4wap-878.pages.dev/" target="_blank" rel="noopener" class="btn-domain btn-secondary">
+          Visit Domain 2 Server
+        </a>
       </div>
     </section>
 
     <!-- Intro Card -->
-    <article class="card searchable-content">
+    <article class="card">
       <p>It is utterly frustrating.</p>
       <p>That exact headache is why <strong>Filmy4wap</strong> became such a massive name among movie lovers. People got tired of heavy, slow websites that treat mobile users like an afterthought. Filmy4wap flipped the script by keeping things ridiculously simple, lightweight, and fast.</p>
       <p>Whether you are looking for high-octane South Indian action movies dubbed in Hindi, the latest Bollywood dramas, Hollywood blockbusters, or popular web series, this page gives you the full, real-deal overview of what makes Filmy4wap tick, how to use it without burning through your internet pack, and why its design works so well on mobile screens.</p>
     </article>
 
     <!-- Section 1 -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Why Is Everyone Searching for Filmy4wap?</h2>
       <p>Let’s be real for a second. There are literally thousands of movie pages floating around the web. So why do so many people type "Filmy4wap" into their search bar every single day?</p>
       <p>It really comes down to convenience. When you land on the site, it does not feel like you need a degree in computer science just to find what you want.</p>
@@ -690,7 +709,7 @@
     </section>
 
     <!-- Section 2: Vault -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>A Tour of the Content Vault: What Can You Find on Filmy4wap?</h2>
       <p>The platform does not just dump thousands of random titles into one messy pile. Everything is neatly separated into categories so you can jump straight to your favorite genre without wasting time scrolling through stuff you don't care about.</p>
 
@@ -721,7 +740,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 3: Video Quality -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Let's Talk Video Quality & Saving Your Mobile Internet</h2>
       <p>We don't all have unlimited fiber Wi-Fi at home. Millions of users rely on daily mobile data packs—usually around 1.5GB or 2GB per day. If you spend half of that just opening a web page, your day is ruined.</p>
       <p>Filmy4wap solves this problem by offering multiple video quality formats. Here is a realistic breakdown of how to pick the right one for your phone and data situation:</p>
@@ -758,7 +777,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 4: Site Layout -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Why the Site Layout Just Works (No Frills, Just Speed)</h2>
       <p>Have you ever visited a website that looked super fancy with moving sliders, background videos, and flash graphics, but took 20 seconds just to scroll down? It is exhausting.</p>
       <p>Filmy4wap drops all that unnecessary fluff. Here is why the design actually feels good to use:</p>
@@ -771,7 +790,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 5: Comparison Table -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Filmy4wap vs. Clunky Traditional Sites: A Quick Comparison</h2>
       <p>To see why so many users prefer this simple layout over heavy streaming portals, look at how they stack up side by side:</p>
 
@@ -821,7 +840,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 6: Steps -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>How to Find Your Way Around Filmy4wap in 4 Simple Steps</h2>
       <p>Navigating the site is as straightforward as it gets. You don't need a map.</p>
 
@@ -846,7 +865,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 7: Hacks -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Realistic Data-Saving Hacks for Smartphone Browsing</h2>
       <p>If you are running low on your daily 1.5GB internet pack, here are a few practical tricks to keep your data usage as low as possible while browsing for movie details:</p>
       <ul>
@@ -857,7 +876,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 8: Devices -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Works on Pretty Much Any Device</h2>
       <p>You don't need the latest flagship phone to open Filmy4wap smoothly. Because the underlying code is lightweight HTML, it runs cleanly on almost anything with a screen and a browser:</p>
       <ul>
@@ -869,7 +888,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 9: FAQs -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Frequently Asked Questions (FAQs)</h2>
 
       <div class="faq-item">
@@ -944,7 +963,7 @@ Filmy4wap Main Vault
     </section>
 
     <!-- Section 10: Conclusion -->
-    <section class="card searchable-content">
+    <section class="card">
       <h2>Wrapping It Up</h2>
       <p>At the end of the day, <strong>Filmy4wap</strong> built its massive popularity on one simple idea: <strong>give users a fast, no-nonsense experience on their phones.</strong> By keeping the layout clean, avoiding heavy scripts, offering clear file size choices, and focusing heavily on high-demand regional cinema like South Indian Hindi dubs, it makes finding movie info completely painless.</p>
 
@@ -1004,23 +1023,6 @@ Filmy4wap Main Vault
         // Toggle current
         if (!isActive) {
           faqItem.classList.add('active');
-        }
-      });
-    });
-
-    // Live Search / Topic Filter
-    const filterInput = document.getElementById('filter-input');
-    const searchableSections = document.querySelectorAll('.searchable-content');
-
-    filterInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase().trim();
-      
-      searchableSections.forEach(section => {
-        const text = section.innerText.toLowerCase();
-        if (term === '' || text.includes(term)) {
-          section.style.display = 'block';
-        } else {
-          section.style.display = 'none';
         }
       });
     });
