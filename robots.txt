@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://filmy4wap1.pages.dev/sitemap.xml
+Sitemap: https://ofilmy4wap.site/sitemap.xml
