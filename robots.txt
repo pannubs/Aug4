@@ -1,5 +1,7 @@
 User-agent: *
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-admin/
 Allow: /
 
-# Sitemap Location
 Sitemap: https://ofilmy4wap.site/sitemap.xml
