@@ -1,0 +1,4 @@
+# Serve static files directly
+/disclaimer.html /disclaimer.html 200
+/sitemap.xml /sitemap.xml 200
+/robots.txt /robots.txt 200
